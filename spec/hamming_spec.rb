@@ -8,4 +8,8 @@ RSpec.describe "hamming test" do
   it "tests one different strand" do
     expect(Hamming.compute('A', 'B')).to eq(1)
   end
+
+  it "tests longer identical strands" do
+    expect(Hamming.compute('AB', 'AB')).to eq(0)
+  end
 end
