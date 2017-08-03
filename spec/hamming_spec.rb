@@ -20,4 +20,8 @@ RSpec.describe "hamming test" do
   it "tests long identical strand" do
     expect(Hamming.compute('GATACA', 'GTATEA')).to eq(4)
   end
+
+  it "tests disallows if not the same length" do
+    expect{ Hamming.compute('GATF', 'GHAHEG')}.to raise_error(ArgumentError)
+  end
 end
