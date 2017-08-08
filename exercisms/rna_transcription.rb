@@ -1,7 +1,7 @@
 class Complement
   def self.of_dna(strand)
     new_strand = []
-    conversion = { 'C' => 'G', 'A' => 'U' }
+    conversion = { 'C' => 'G', 'A' => 'U', 'T' => 'A', 'G' => 'C' }
     strand.chars.each do |i|
       new_strand << conversion[i]
     end

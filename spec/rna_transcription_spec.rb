@@ -8,4 +8,8 @@ RSpec.describe "RNA test" do
   it "tests that it can convert two parts of a strand" do
     expect(Complement.of_dna('CA')).to eq('GU')
   end
+
+  it "tests that it can convert a long strand" do
+    expect(Complement.of_dna('CACTAG')).to eq('GUGAUC')
+  end
 end
