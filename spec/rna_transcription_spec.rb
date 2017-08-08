@@ -20,4 +20,8 @@ RSpec.describe "RNA test" do
   it "tests it handles completely invalid input" do
     expect(Complement.of_dna('XXX')).to eq('')
   end
+
+  it "tests it handles partial invalid input" do
+    expect(Complement.of_dna('CACXTAG')).to eq('')
+  end
 end
