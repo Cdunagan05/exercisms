@@ -12,4 +12,12 @@ RSpec.describe "RNA test" do
   it "tests that it can convert a long strand" do
     expect(Complement.of_dna('CACTAG')).to eq('GUGAUC')
   end
+
+  it "tests it handles invalid input" do
+    expect(Complement.of_dna('U')).to eq('')
+  end
+
+  it "tests it handles completely invalid input" do
+    expect(Complement.of_dna('XXX')).to eq('')
+  end
 end
