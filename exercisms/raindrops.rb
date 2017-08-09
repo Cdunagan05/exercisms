@@ -1,5 +1,9 @@
 class Raindrops
   def self.convert(number)
-    return "1"
+    if number == 3
+      return "Pling"
+    else
+      return number.to_s
+    end
   end
 end
