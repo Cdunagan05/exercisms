@@ -2,6 +2,7 @@ require 'pry'
 
 class Raindrops
   def self.convert(number)
+    sound = ''
     factors = []
     (1..number).each_with_index do |i|
       if number % i == 0
@@ -9,15 +10,18 @@ class Raindrops
       end
       # binding.pry
     end
-    if factors.include?(3)
-      return 'Pling'
+    if factors.include?(3) && factors.include?(7)
+    sound += 'PlingPlong'
+    elsif factors.include?(3)
+      sound += 'Pling'
     elsif factors.include?(5)
-      return 'Plang'
+      sound += 'Plang'
     elsif factors.include?(7)
-      return 'Plong'
+      sound += 'Plong'
     else
       return number.to_s
     end
+    sound
     # if number == 3
     #   return "Pling"
     # elsif number == 5
