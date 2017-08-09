@@ -1,3 +1,5 @@
+require 'pry'
+
 class Raindrops
   def self.convert(number)
     factors = []
@@ -5,6 +7,7 @@ class Raindrops
       if number % i == 0
         factors << i
       end
+      # binding.pry
     end
     if factors.include?(3)
       return 'Pling'
