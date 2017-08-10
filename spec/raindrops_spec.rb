@@ -17,6 +17,10 @@ RSpec.describe "Raindrop tests" do
     expect(Raindrops.convert(7)).to eq("Plong")
   end
 
+  it "tests the sound for 14 is plong" do
+    expect(Raindrops.convert(14)).to eq("Plong")
+  end
+
   it "tests the sound for 21 is plingplong" do
     expect(Raindrops.convert(21)).to eq("PlingPlong")
   end
