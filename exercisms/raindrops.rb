@@ -10,24 +10,20 @@ class Raindrops
       end
       # binding.pry
     end
-    if factors.include?(3) && factors.include?(7)
-    sound += 'PlingPlong'
-    elsif factors.include?(3)
-      sound += 'Pling'
-    elsif factors.include?(5)
-      sound += 'Plang'
-    elsif factors.include?(7)
-      sound += 'Plong'
-    else
+    factor_length = factors.length
+    if factors - [3, 5, 7] == factors.length
       return number.to_s
+    else
+      factors.each do |i|
+        if i == 3
+          sound += 'Pling'
+        elsif i == 5
+          sound += 'Plang'
+        elsif i == 7
+          sound += 'Plong'
+        end
+      end
+      sound
     end
-    sound
-    # if number == 3
-    #   return "Pling"
-    # elsif number == 5
-    #   return "Plang"
-    # else
-    #   return number.to_s
-    # end
   end
 end
