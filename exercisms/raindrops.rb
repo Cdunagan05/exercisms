@@ -3,15 +3,9 @@ require 'pry'
 class Raindrops
   def self.convert(number)
     sound = ''
-    factors = []
-    (1..number).each_with_index do |i|
-      if number % i == 0
-        factors << i
-      end
-      # binding.pry
-    end
+    factors = find_factors(number)
     factor_length = factors.length
-    if factors - [3, 5, 7] == factors.length
+    if (factors - [3, 5, 7]) == factors
       return number.to_s
     else
       factors.each do |i|
@@ -25,5 +19,15 @@ class Raindrops
       end
       sound
     end
+  end
+
+  def self.find_factors(number)
+    factors = []
+    (1..number).each_with_index do |i|
+      if number % i == 0
+        factors << i
+      end
+    end
+    factors
   end
 end
