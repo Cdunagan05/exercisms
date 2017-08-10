@@ -4,7 +4,6 @@ class Raindrops
   def self.convert(number)
     sound = ''
     factors = find_factors(number)
-    factor_length = factors.length
     if (factors - [3, 5, 7]) == factors
       return number.to_s
     else
