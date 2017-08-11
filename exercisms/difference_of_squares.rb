@@ -7,4 +7,12 @@ class Squares
     total = (1..@number).to_a.reduce(:+)
     return total**2
   end
+
+  def sum_of_squares
+    squares = []
+    (1..@number).each do |i|
+      squares << i**2
+    end
+    squares.reduce(:+)
+  end
 end
