@@ -29,4 +29,12 @@ RSpec.describe "difference of squares tests" do
     expect(Squares.new(1).difference).to eq(0)
   end
 
+  it "tests the difference of squares of 5" do
+    expect(Squares.new(5).difference).to eq(170)
+  end
+
+  it "tests the difference of squares of 100" do
+    expect(Squares.new(100).difference).to eq(25164150)
+  end
+
 end
