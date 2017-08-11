@@ -15,4 +15,8 @@ class Squares
     end
     squares.reduce(:+)
   end
+
+  def difference
+    square_of_sum - sum_of_squares
+  end
 end
