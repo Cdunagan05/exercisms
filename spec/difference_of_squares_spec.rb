@@ -16,4 +16,14 @@ RSpec.describe "difference of squares tests" do
   it "tests the sum of squares of 1" do
     expect(Squares.new(1).sum_of_squares).to eq(1)
   end
+
+  it "tests the sum of squares of 5" do
+    expect(Squares.new(5).sum_of_squares).to eq(55)
+  end
+
+  it "tests the sum of squares of 100" do
+    expect(Squares.new(100).sum_of_squares).to eq(338350)
+  end
+
+
 end
