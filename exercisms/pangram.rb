@@ -6,7 +6,7 @@ class Pangram
               'y', 'z']
 
   def self.pangram?(phrase)
-    if Alphabet - phrase.chars == []
+    if Alphabet - phrase.downcase.chars == []
       true
     else
       false
