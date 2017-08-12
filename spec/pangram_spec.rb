@@ -15,5 +15,10 @@ RSpec.describe "Pangram tests" do
     expect(Pangram.pangram?(phrase)).to eq(false)
   end
 
+  it "tests the phrase is still a pangram with underscores" do
+    phrase = "the_quick_brown_fox_jumps_over_the_lazy_dog"
+    expect(Pangram.pangram?(phrase)).to eq(true)
+  end
+
 
 end
