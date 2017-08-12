@@ -30,5 +30,10 @@ RSpec.describe "Pangram tests" do
     expect(Pangram.pangram?(phrase)).to eq(false)
   end
 
+  it "tests phrase with mixed case and punctuation" do
+    phrase = '"Five quacking Zephyrs jolt my wax bed."'
+    expect(Pangram.pangram?(phrase)).to eq(true)
+  end
+
 
 end
