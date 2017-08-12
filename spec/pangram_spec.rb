@@ -35,5 +35,8 @@ RSpec.describe "Pangram tests" do
     expect(Pangram.pangram?(phrase)).to eq(true)
   end
 
-
+  it "tests upper and lower case versions of same word should not be counted separately" do
+    phrase = 'the quick brown fox jumped over the lazy FOX'
+    expect(Pangram.pangram?(phrase)).to eq(false)
+  end
 end
