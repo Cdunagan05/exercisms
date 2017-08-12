@@ -20,5 +20,10 @@ RSpec.describe "Pangram tests" do
     expect(Pangram.pangram?(phrase)).to eq(true)
   end
 
+  it "tests the phrase is still a pangram with numbers" do
+    phrase = 'the 1 quick brown fox jumps over the 2 lazy dogs'
+    expect(Pangram.pangram?(phrase)).to eq(true)
+  end
+
 
 end
