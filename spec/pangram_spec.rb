@@ -25,5 +25,10 @@ RSpec.describe "Pangram tests" do
     expect(Pangram.pangram?(phrase)).to eq(true)
   end
 
+  it "tests missing letters replaced with numbers" do
+    phrase = '7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog'
+    expect(Pangram.pangram?(phrase)).to eq(false)
+  end
+
 
 end
