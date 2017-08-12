@@ -10,5 +10,10 @@ RSpec.describe "Pangram tests" do
     expect(Pangram.pangram?(phrase)).to eq(true)
   end
 
+  it "tests the phrase is missing an x" do
+    phrase = "a quick movement of the enemy will jeopardize five gunboats"
+    expect(Pangram.pangram?(phrase)).to eq(false)
+  end
+
 
 end
