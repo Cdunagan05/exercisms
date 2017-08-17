@@ -1,6 +1,6 @@
 class Integer
   def to_roman
-    romans = {1 => "I"}
+    romans = {1 => "I", 2 => "II"}
     romans[self]
   end
 end
