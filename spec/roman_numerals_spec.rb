@@ -20,8 +20,12 @@ RSpec.describe "Roman numerals tests" do
   it "tests 6" do
     expect(6.to_roman).to eq("VI")
   end
-  
+
   it "tests 9" do
     expect(9.to_roman).to eq("IX")
+  end
+
+  it "tests 27" do
+    expect(27.to_roman).to eq("XXVII")
   end
 end
