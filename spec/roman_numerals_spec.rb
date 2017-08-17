@@ -10,6 +10,6 @@ RSpec.describe "Roman numerals tests" do
   end
 
   it "tests 4" do
-    epect(4.to_roman).to eq("IV")
+    expect(4.to_roman).to eq("IV")
   end
 end
