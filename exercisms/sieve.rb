@@ -6,21 +6,17 @@ class Sieve
   end
 
   def primes
-    all_nums = (2..@number).to_a
+    all_nums = (1..@number).to_a
     primes = []
     trash_nums = []
     all_nums.each do |i|
-      (2..(i/2)).to_a.each do |k|
-        if i % k != 0
-          primes << i
-          all_nums.each do |h|
-            if h % i == 0
-              trash_nums << h
-            end
-          all_nums = (all_nums - trash_nums)
-          end
+      (2..i).to_a.each do |k|
+        if i % k == 0
+          break
         end
+        primes << i
       end
+      primes
     end
   end
 end
